@@ -1,0 +1,24 @@
+# 模型权重：预训练的 yolov8s.pt 会自动下载，训练产出的 best.pt 体积大，都不入库
+*.pt
+*.onnx
+*.engine
+
+# 训练与推理产物（docs/figures/ 里的成品图是入库的，不受影响）
+runs/
+results/
+
+# 数据集：GC10-DET 是公开数据集，自行下载，不随仓库分发
+datasets/
+data/GC10-DET/
+*.zip
+*.tar.gz
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 系统
+.DS_Store
+Thumbs.db

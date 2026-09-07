@@ -1,0 +1,37 @@
+# GC10-DET 金属板材表面缺陷数据集配置
+#
+# 数据集本身不在仓库里，需要自行下载后按下面的目录结构摆放：
+#
+#   <你的数据集根目录>/
+#   ├── train/
+#   │   ├── images/        1603 张
+#   │   └── labels/        同名 .txt，YOLO 格式
+#   ├── valid/
+#   │   ├── images/         461 张
+#   │   └── labels/
+#   └── test/
+#       ├── images/         230 张
+#       └── labels/
+#
+# 标签每行 5 个数：类别编号 + 归一化的中心坐标 x y 与宽高 w h，值域 [0, 1]。
+# 把下面的 path 改成你自己的绝对路径。
+
+path: D:/datasets/GC10-DET
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 10
+
+# 顺序即类别编号，不要改动，否则和已训练的权重对不上
+names:
+  0: punching_hole    # 冲孔缺陷
+  1: welding_line     # 焊缝缺陷
+  2: crescent_gap     # 月牙弯
+  3: water_spot       # 水斑
+  4: oil_spot         # 油斑
+  5: silk_spot        # 丝斑
+  6: inclusion        # 异物
+  7: rolled_pit       # 压痕
+  8: crease           # 折痕
+  9: waist_folding    # 咬折
